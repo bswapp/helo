@@ -4,7 +4,7 @@ module.exports = {
   register: () => {},
   login: () => {},
   searchPosts: () => {},
-  getPost: () => {},
+  getPosts: () => {},
   addPost: () => {},
   logout: () => {
     req.session.destroy;

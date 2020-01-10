@@ -1,2 +1,2 @@
 INSERT INTO helo (username, password, profile_pic)
-VALUES ('brooke', 'test', 'url.test');
+VALUES ($1, $2, $3);

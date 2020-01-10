@@ -7,7 +7,7 @@ import Post from "./Components/Post/Post";
 
 export default (
   <Switch>
-    <Route component={Auth} exact path="/" />
+    <Route exact path="/" component={Auth} />
     <Route component={Dashboard} path="/dashboard" />
     <Route component={Post} path="/post/:postid" />
     <Route component={Form} path="/new" />

@@ -1,0 +1,1 @@
+SELECT username, profile_pic FROM helo WHERE id = $1

@@ -1,5 +1,5 @@
 require("dotenv").config();
-const controller = require("express");
+const controller = require("./controller");
 const express = require("express");
 const session = require("express-session");
 const massive = require("massive");
@@ -25,11 +25,10 @@ app.post("/auth/login", controller.login);
 app.post("/auth/logout", controller.logout);
 
 app.get("/auth/posts", controller.searchPosts);
-app.get("auth/post/:id", controller.getPosts);
+app.get("/auth/post/:id", controller.getPosts);
 app.post("/api/post/", controller.addPost);
 
-app
-  .massive(CONNECTION_STRING)
+massive(CONNECTION_STRING)
   .then(db => {
     app.set("db", db);
     console.log("database connected");
