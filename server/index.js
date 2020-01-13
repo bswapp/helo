@@ -23,9 +23,10 @@ app.use(
 app.post("/auth/register", controller.register);
 app.post("/auth/login", controller.login);
 app.post("/auth/logout", controller.logout);
+app.get("/auth/me", controller.me);
 
 app.get("/auth/posts", controller.searchPosts);
-app.get("/auth/post/:id", controller.getPosts);
+app.get("/auth/post/:id", controller.getPost);
 app.post("/api/post/", controller.addPost);
 
 massive(CONNECTION_STRING)
